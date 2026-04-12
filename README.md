@@ -1,2 +1,2 @@
-# Tomodachi-collection-ita-website
-Tomodachi collection ita website
+# README
+Repo del sito web di Tomodachi Collection Italiano
