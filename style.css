@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+
+    --bg-color: #121212;             
+    --container-bg: #1e1e1e;         
+    --text-main: #f0f0f0;            
+    --text-muted: #a0a0a0;           
+    --accent-red: #e65842;           
+    --accent-yellow: #fdd835;        
+    --accent-blue: #00aced;          
+    --card-bg: #2a2a2a;              
+    --bubble-bg: #fdd835;            
+    --bubble-text: #121212;          
+    --border-radius: 12px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+
+    background-image: radial-gradient(circle at top center, rgba(230, 88, 66, 0.05), transparent 50%);
+}
+
+.container {
+    max-width: 750px; 
+    margin: 0 auto;
+    background-color: var(--container-bg);
+    min-height: 100vh;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden; 
+}
+
+header {
+    text-align: center;
+    background-color: var(--accent-red); 
+    border-bottom: 5px solid var(--accent-yellow);
+    width: 100%;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+
+    min-height: 150px; 
+}
+
+main {
+    padding: 30px;
+}
+
+.download-section {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px; 
+    margin-bottom: 40px;
+    z-index: 10;
+    position: relative;
+}
+
+.download-bubble {
+    display: inline-block;
+    background-color: var(--bubble-bg);
+    color: var(--bubble-text);
+    padding: 15px 45px;
+    border-radius: 40px; 
+    font-size: 26px;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 8px 0 #ccaa00, 0 15px 25px rgba(0,0,0,0.5); 
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 4px solid #fff;
+}
+
+.download-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px; 
+    left: 70%;
+    margin-left: -15px;
+    border-width: 20px 20px 0 0;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+    display: block;
+    width: 0;
+    z-index: -1;
+}
+
+.download-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 70%;
+    margin-left: -10px;
+    border-width: 15px 15px 0 0;
+    border-style: solid;
+    border-color: var(--bubble-bg) transparent transparent transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+}
+
+.download-bubble:hover {
+    transform: translateY(4px) scale(1.05); 
+    box-shadow: 0 4px 0 #ccaa00, 0 8px 15px rgba(0,0,0,0.5);
+}
+
+.download-bubble:active {
+    transform: translateY(8px) scale(0.98);
+    box-shadow: 0 0 0 #ccaa00, 0 4px 5px rgba(0,0,0,0.5);
+}
+
+h2 {
+    color: var(--accent-yellow);
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: var(--text-main);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px 25px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--accent-red); 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.card:nth-of-type(2) {
+    border-left-color: var(--accent-blue); 
+}
+
+.team-card {
+    border-left-color: var(--accent-yellow);
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+code {
+    background-color: #111;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: var(--accent-yellow);
+    font-family: Consolas, monospace;
+    font-size: 0.9em;
+}
+
+.warning {
+    color: #ff6b6b; 
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #55cfff; 
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    color: var(--text-muted);
+    font-size: 0.85em;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    background-color: #161616;
+}
