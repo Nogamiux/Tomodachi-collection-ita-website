@@ -78,9 +78,9 @@
             </section>
 
             <section class="translation-guide-section">
-                <h2>Come Tradurre (Dietro le quinte)</h2>
+                <h2>Come Tradurre</h2>
 
-                <div class="card">
+                <div class="card" style="border-left-color: var(--accent-yellow);">
                     <p>Curiosi di sapere come abbiamo tradotto il gioco o volete cimentarvi anche voi? Ecco i passaggi
                         tecnici fondamentali!</p>
                 </div>
@@ -93,10 +93,12 @@
                     </p>
                 </div>
 
-                <div class="card">
+                <div class="card" style="border-left-color: #4caf50;">
                     <h3>2. Modifica ed Esportazione</h3>
                     <p>I file BMG vanno aperti con strumenti specifici. Noi consigliamo caldamente
-                        <a href="https://www.romhacking.net/utilities/1132/" target="_blank"><strong>bmgeditorarquivo</strong></a>, in quanto è pienamente compatibile; altri editor potrebbero
+                        <a href="https://www.romhacking.net/utilities/1132/"
+                            target="_blank"><strong>bmgeditorarquivo</strong></a>, in quanto è pienamente compatibile;
+                        altri editor potrebbero
                         generare corruzioni indesiderate.
                     </p>
                     <p>Con <em>bmgeditorarquivo</em> è possibile convertire i BMG in file <strong>.txt</strong>,
@@ -118,17 +120,45 @@
                                     di testo!</em></li>
                         </ul>
 
-                        <div style="display: flex; gap: 20px; margin-top: 20px; align-items: center; justify-content: center; flex-wrap: wrap;">
-                            <div style="text-align: center; background-color: #222; padding: 10px; border-radius: 6px; border: 1px solid #444;">
-                                <img src="images/utf8.png" alt="Testo in UTF-8" style="max-width: 100%; height: auto; border-radius: 4px;">
-                                <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold; color: #ff6b6b;">UTF-8</p>
+                        <div
+                            style="display: flex; gap: 20px; margin-top: 20px; align-items: center; justify-content: center; flex-wrap: wrap;">
+                            <div
+                                style="text-align: center; background-color: #222; padding: 10px; border-radius: 6px; border: 1px solid #444;">
+                                <img src="images/utf8.png" alt="Testo in UTF-8"
+                                    style="max-width: 100%; height: auto; border-radius: 4px;">
+                                <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold; color: #ff6b6b;">UTF-8
+                                </p>
                             </div>
-                            <div style="text-align: center; background-color: #222; padding: 10px; border-radius: 6px; border: 1px solid #444;">
-                                <img src="images/utf16.png" alt="Testo in UTF-16" style="max-width: 100%; height: auto; border-radius: 4px;">
-                                <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold; color: #4caf50;">UTF-16</p>
+                            <div
+                                style="text-align: center; background-color: #222; padding: 10px; border-radius: 6px; border: 1px solid #444;">
+                                <img src="images/utf16.png" alt="Testo in UTF-16"
+                                    style="max-width: 100%; height: auto; border-radius: 4px;">
+                                <p style="font-size: 0.9em; margin-top: 8px; font-weight: bold; color: #4caf50;">UTF-16
+                                </p>
                             </div>
                         </div>
                     </div>
+                    <p
+                        style="margin-top: 25px; border-left: 3px solid #ff6b6b; padding-left: 10px; background-color: rgba(255, 107, 107, 0.1); padding: 10px; border-radius: 4px;">
+                        ⚠️ <strong>AVVERTENZA CRITICA:</strong> Durante la modifica dei file BMG, sia che stiate
+                        lavorando sui file "grezzi" o sui file esportati in formato <code>.txt</code>, <strong>NON
+                            DOVETE ASSOLUTAMENTE</strong> toccare, alterare o eliminare i caratteri speciali di
+                        controllo (come <code>&lt;0x00&gt;</code>, <code>&lt;0x01&gt;</code>, <code>&lt;0x1e&gt;</code>
+                        e così via). Modificare o eliminare questi byte farà crashare o renderà il gioco <strong>non
+                            funzionante</strong>!
+                    </p>
+
+                    <p
+                        style="margin-top: 15px; border-left: 3px solid var(--accent-yellow); padding-left: 10px; background-color: rgba(253, 216, 53, 0.1); padding: 10px; border-radius: 4px;">
+                        ⚠️ <strong>ATTENZIONE ALLA LUNGHEZZA DELLE RIGHE:</strong> Se una riga di testo è troppo lunga,
+                        non entrerà nello schermo del Nintendo DS. Il limite teorico è di circa <strong>30 lettere per
+                            riga</strong>, MA varia in base al tipo di testo e a dove è collocato nell'interfaccia.
+                        Alcune parole, anche nella traduzione finale, potrebbero uscire dallo schermo perché purtroppo
+                        con l'italiano è a volte inevitabile. Se avete consigli per sostituire termini o frasi che
+                        escono dai bordi, vi invitiamo a scriverlo nelle <a
+                            href="https://gitlab.com/Nogamiux/tomodachi-collection-ita/-/issues" target="_blank"
+                            style="text-decoration: underline;">Issue della repository</a>!
+                    </p>
 
                     <h4 style="margin-top: 25px; margin-bottom: 10px;">Tabella di conversione caratteri speciali</h4>
                     <div class="table-responsive">
@@ -174,7 +204,7 @@
                                 <tr>
                                     <td><span class="char-code">(</span> ASCII</td>
                                     <td><span class="char-code">28 00</span></td>
-                                    <td><span class="char-code">\x28</span> &larr; talk bug!</td>
+                                    <td><span class="char-code">\x28</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -202,7 +232,7 @@
                     </ol>
                 </div>
 
-                <div class="card">
+                <div class="card" style="border-left-color: var(--accent-blue);">
                     <h3>4. Re-inserimento dei testi</h3>
                     <p>Una volta sistemato il BMG tramite l'editor esadecimale, non vi resta che applicare tutto
                         re-inserendo il file all'interno della ROM utilizzando nuovamente <strong>Tinke</strong> o
